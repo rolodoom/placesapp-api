@@ -1,0 +1,197 @@
+[
+  {
+    "_id": "61f136932ae6c1221a2ca9f7",
+    "title": "Central Park",
+    "description": "Central Park is a large public park located in the heart of Manhattan, New York City. It is a popular destination for visitors and locals alike, offering a variety of recreational activities and stunning views of the city skyline.",
+    "image": "https://source.unsplash.com/A2CChTZvzTE",
+    "address": "Central Park, Manhattan, New York City, USA",
+    "location": {
+      "lat": 40.785091,
+      "lng": -73.968285
+    },
+    "creator": "619e570f5a8a5a60cdd680da"
+  },
+  {
+    "_id": "613d46b1a2002c1bb7f77375",
+    "title": "Walt Disney Concert Hall",
+    "description": "The Walt Disney Concert Hall is a stunning piece of modern architecture located in Downtown Los Angeles, California. It is the home of the Los Angeles Philharmonic orchestra and a popular venue for concerts and events.",
+    "image": "https://source.unsplash.com/XOeCBcX42s4",
+    "address": "Walt Disney Concert Hall, Los Angeles, California, USA",
+    "location": {
+      "lat": 34.0552,
+      "lng": -118.2494
+    },
+    "creator": "619e570f5a8a5a60cdd680da"
+  },
+  {
+    "_id": "617d22b99a4be4f5374b1e28",
+    "title": "Niagara Falls",
+    "description": "Niagara Falls is a group of three waterfalls located on the Niagara River along the border between the United States and Canada. It is a popular tourist attraction and one of the most famous natural wonders in the world.",
+    "image": "https://source.unsplash.com/Gcc3c6MfSM0",
+    "address": "Niagara Falls, New York, USA",
+    "location": {
+      "lat": 43.0896,
+      "lng": -79.0849
+    },
+    "creator": "619e570f5a8a5a60cdd680da"
+  },
+  {
+    "_id": "60e42b7a901ccf3c3b0d3b4f",
+    "title": "The Space Needle",
+    "description": "The Space Needle is a landmark observation tower located in Seattle, Washington. It was built for the 1962 World's Fair and offers panoramic views of the city and the surrounding area.",
+    "image": "https://source.unsplash.com/QfhbK2pY0Ao",
+    "address": "The Space Needle, Seattle, Washington, USA",
+    "location": {
+      "lat": 47.6205,
+      "lng": -122.3493
+    },
+    "creator": "616e4f28c9f4d4b4f3f6c38d"
+  },
+  {
+    "_id": "61947f1c43aa4e4c59f38b1e",
+    "title": "Yosemite National Park",
+    "description": "Yosemite National Park is a natural wonderland located in the Sierra Nevada mountains of California. It is known for its stunning scenery, including towering granite cliffs, waterfalls, and giant sequoia trees.",
+    "image": "https://source.unsplash.com/T-tOgjWZ0fQ",
+    "address": "Yosemite National Park, California, USA",
+    "location": {
+      "lat": 37.8651,
+      "lng": -119.5383
+    },
+    "creator": "616e4f28c9f4d4b4f3f6c38d"
+  },
+  {
+    "_id": "613d89f3c780442e0e643b68",
+    "title": "Eiffel Tower",
+    "description": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France.",
+    "image": "https://source.unsplash.com/UDyF0_Frxqs",
+    "address": "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
+    "location": { "lat": 48.8582, "lng": 2.2945 },
+    "creator": "616e4f28c9f4d4b4f3f6c38d"
+  },
+  {
+    "_id": "6142ef883c7f573126e57997",
+    "title": "Big Ben",
+    "description": "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London, England.",
+    "image": "https://source.unsplash.com/paINk01G8Xk",
+    "address": "Westminster, London SW1A 0AA, United Kingdom",
+    "location": { "lat": 51.5007, "lng": -0.1246 },
+    "creator": "6187dbf6a3a0c0133c7b936d"
+  },
+  {
+    "_id": "618d95c1ba9df424864a82ed",
+    "title": "Sagrada Familia",
+    "description": "The Basílica de la Sagrada Família is a large unfinished Roman Catholic church in Barcelona, Catalonia, Spain.",
+    "image": "https://source.unsplash.com/u9wh18i-24k",
+    "address": "Carrer de Mallorca, 401, 08013 Barcelona, Spain",
+    "location": { "lat": 41.4036, "lng": 2.1744 },
+    "creator": "6187dbf6a3a0c0133c7b936d"
+  },
+  {
+    "_id": "61f245c7a64f8c57f7d1d2a9",
+    "title": "Colosseum",
+    "description": "The Colosseum, also known as the Flavian Amphitheatre, is an oval amphitheatre in the centre of Rome, Italy.",
+    "image": "https://source.unsplash.com/VFRTXGw1VjU",
+    "address": "Piazza del Colosseo, 1, 00184 Roma RM, Italy",
+    "location": { "lat": 41.8902, "lng": 12.4922 },
+    "creator": "6187dbf6a3a0c0133c7b936d"
+  },
+  {
+    "_id": "61100e3d7f3e6743c5e5e947",
+    "title": "Brandenburg Gate",
+    "description": "The Brandenburg Gate is an 18th-century neoclassical monument in Berlin, Germany.",
+    "image": "https://source.unsplash.com/mtfTz0FnwBw",
+    "address": "Pariser Platz, 10117 Berlin, Germany",
+    "location": { "lat": 52.5163, "lng": 13.3777 },
+    "creator": "611b8aaee839a7500151a35f"
+  },
+  {
+    "_id": "6126d82b6ba9ee1c8f3157d7",
+    "title": "Machu Picchu",
+    "description": "Machu Picchu is a 15th-century Inca citadel, located in the Cusco Region of Peru.",
+    "image": "https://source.unsplash.com/rFESpq5MMTg",
+    "address": "Machu Picchu, Aguas Calientes 08681, Peru",
+    "location": { "lat": -13.1631, "lng": -72.545 },
+    "creator": "611b8aaee839a7500151a35f"
+  },
+  {
+    "_id": "6167aebc2798e47c013e7252",
+    "title": "Iguazu Falls",
+    "description": "Iguazu Falls is a waterfall system on the border of the Argentine province of Misiones and the Brazilian state of Paraná.",
+    "image": "https://source.unsplash.com/5rbQW61lOSU",
+    "address": "Iguazú National Park, Misiones Province, Argentina",
+    "location": { "lat": -25.6953, "lng": -54.4367 },
+    "creator": "617e60ecf46bb52630a99b9c"
+  },
+  {
+    "_id": "619162c2e45f7b55f3a3ab7c",
+    "title": "Christ the Redeemer",
+    "description": "Christ the Redeemer is an Art Deco statue of Jesus Christ in Rio de Janeiro, Brazil.",
+    "image": "https://source.unsplash.com/OkiDIla7K8Q",
+    "address": "Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ, 22241-330, Brazil",
+    "location": { "lat": -22.9519, "lng": -43.2105 },
+    "creator": "617e60ecf46bb52630a99b9c"
+  },
+  {
+    "_id": "60a7eb1df0d74f4f0c66ec89",
+    "title": "Valparaiso",
+    "description": "Valparaíso is a major city, seaport, and educational center in the central coast of Chile.",
+    "image": "https://source.unsplash.com/KLwpGXi1FEI",
+    "address": "Valparaíso, Valparaiso Region, Chile",
+    "location": { "lat": -33.0458, "lng": -71.6197 },
+    "creator": "617e60ecf46bb52630a99b9c"
+  },
+  {
+    "_id": "61adad08a0b56e2bdaaa90f3",
+    "title": "Salar de Uyuni",
+    "description": "Salar de Uyuni is the world's largest salt flat, located in the Potosí and Oruro departments in southwest Bolivia.",
+    "image": "https://source.unsplash.com/kp_87tExCwI",
+    "address": "Salar de Uyuni, Bolivia",
+    "location": { "lat": -20.1334, "lng": -67.4891 },
+    "creator": "613bca75e7b13e1f1c5b5f5c"
+  },
+  {
+    "_id": "60f9c50c8d17b46d85f2a1b1",
+    "title": "La Catedral de Sal",
+    "description": "The Catedral de Sal is an underground cathedral built within the tunnels of a salt mine.",
+    "image": "https://source.unsplash.com/ig2WUJ_7pvc",
+    "address": "Zipaquirá, Cundinamarca, Colombia",
+    "location": { "lat": 5.0240206, "lng": -74.0058745 },
+    "creator": "613bca75e7b13e1f1c5b5f5c"
+  },
+  {
+    "_id": "612077c14d32437b16a9fc9c",
+    "title": "Ciudad Perdida",
+    "description": "Ciudad Perdida, or the Lost City, is an ancient city built by the Tayrona people and is only accessible by a multi-day hike through the jungle.",
+    "image": "https://source.unsplash.com/t1zuvMV_SOI",
+    "address": "Magdalena, Colombia",
+    "location": { "lat": 11.03863, "lng": -74.18651 },
+    "creator": "60e9c72047a1a965cbb780f5"
+  },
+  {
+    "_id": "614b80d2e1bf875b3161e70f",
+    "title": "Coffee Triangle",
+    "description": "The Coffee Triangle is a region in Colombia known for its coffee plantations and scenic landscapes.",
+    "image": "https://source.unsplash.com/chO9nH4iAKc",
+    "address": "Caldas, Quindío, Risaralda, Colombia",
+    "location": { "lat": 4.6417906, "lng": -75.6650872 },
+    "creator": "61408d7d8b4de2426d4e4bb9"
+  },
+  {
+    "_id": "618b95d6724e2e30d92c58de",
+    "title": "Tayrona National Park",
+    "description": "Tayrona National Park is a coastal national park known for its beaches, rainforest, and archaeological sites.",
+    "image": "https://source.unsplash.com/Sw0iKr1-qMg",
+    "address": "Santa Marta, Magdalena, Colombia",
+    "location": { "lat": 11.28713, "lng": -74.10824 },
+    "creator": "618cd3e3ba50db74d27f52e4"
+  },
+  {
+    "_id": "6168e08e9d03fb11423851a1",
+    "title": "Las Lajas Sanctuary",
+    "description": "Las Lajas Sanctuary is a basilica church built on a bridge over a river canyon and is a popular pilgrimage site.",
+    "image": "https://source.unsplash.com/Mc0HaWDc4iQ",
+    "address": "Ipiales, Nariño, Colombia",
+    "location": { "lat": 0.82768, "lng": -77.64328 },
+    "creator": "61adad85d4dd9a24d3fc6f1a"
+  }
+]
