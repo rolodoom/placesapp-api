@@ -3,6 +3,7 @@
 
 const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
+const bcrypt = require('bcryptjs');
 
 ///////////////////////////
 // APP MODULES
@@ -33,22 +34,6 @@ const signToken = (id, email) =>
 const createSentToken = (user, statusCode, res) => {
   const token = signToken(user.id, user.email);
 
-  // // Cookie
-  // const cookieOptions = {
-  //   expires: new Date(
-  //     Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000 //Convert to milliseconds
-  //   ),
-  //   httpOnly: true,
-  // };
-  // if (process.env.NODE_ENV === 'production') cookieOptions.secuer = true;
-
-  // res.cookie('jwt', token, cookieOptions);
-
-  // // Remove password from output
-  // user.password = undefined;
-  // user.active = undefined;
-  // user.role = undefined;
-
   res.status(statusCode).json({
     token,
     user: {
@@ -76,11 +61,13 @@ const signUp = catchAsync(async (req, res, next) => {
     );
   }
 
+  const encryptedPassword = await bcrypt.hash(password, 12);
+
   // Create a new user with the provided data
   const newUser = await User.create({
     name,
     email,
-    password,
+    password: encryptedPassword,
   });
 
   // Remove the password field from the response
@@ -89,11 +76,6 @@ const signUp = catchAsync(async (req, res, next) => {
   // If everything is ok, send token to the client
   // with newly created user details
   createSentToken(newUser, 201, res);
-
-  // // Send the response with the newly created user details
-  // res.status(201).json({
-  //   user: newUser,
-  // });
 });
 
 /**
@@ -128,11 +110,6 @@ const logIn = catchAsync(async (req, res, next) => {
 
   // If everything is ok, send token to the client
   createSentToken(identifiedUser, 200, res);
-
-  // res.json({
-  //   message: 'Logged in!',
-  //   user: identifiedUser,
-  // });
 });
 
 const protect = catchAsync(async (req, res, next) => {
@@ -166,9 +143,6 @@ const protect = catchAsync(async (req, res, next) => {
   // Add userid to the request
   req.userData = { userId: decoded.id };
 
-  //   // Grant acces to protected route
-  //   req.user = currentUser;
-  //   res.locals.user = currentUser;
   next();
 });
 
