@@ -192,39 +192,45 @@ const updatePlace = catchAsync(async (req, res, next) => {
     );
   }
 
-  // Get title and description from request body
+  // Get values from request
   const { title, description, image } = req.body;
+  const placeId = req.params.pid;
 
-  try {
-    // Update the place
-    const updatedPlace = await Place.findByIdAndUpdate(
-      req.params.pid,
-      {
-        title,
-        description,
-        image,
-      },
-      {
-        new: true, //  return the new object
-        runValidators: true, // Enable all validators
-      }
+  // Find if the pkace exists!
+  const place = await Place.findById(placeId);
+  if (!place) {
+    return next(
+      new AppError('Could not find a place for the provided id.', 404)
     );
-
-    // Check if the place was found and updated
-    if (!updatedPlace) {
-      return next(
-        new AppError('Could not find a place for the provided id.', 404)
-      );
-    }
-
-    // Send response with the updated place
-    res.status(200).json({
-      place: updatedPlace,
-    });
-  } catch (error) {
-    // Pass any errors to the error handling middleware
-    next(error);
   }
+
+  // Check if the place is own by the current logged user
+  if (place.creator.toString() !== req.userData.userId) {
+    return next(new AppError('You are not allowed to edit this place.', 403));
+  }
+
+  const updatedPlace = await Place.findByIdAndUpdate(
+    placeId,
+    {
+      title,
+      description,
+      image,
+    },
+    {
+      new: true, //  return the new object
+      runValidators: true, // Enable all validators
+    }
+  );
+
+  // Check if the place was found and updated
+  if (!updatedPlace) {
+    return next(new AppError('Could not update the place.', 500));
+  }
+
+  // Send response with the updated place
+  res.status(200).json({
+    place: updatedPlace,
+  });
 });
 
 /**
@@ -247,6 +253,11 @@ const deletePlace = catchAsync(async (req, res, next) => {
     return next(
       new AppError('Could not find a place for the provided id.', 404)
     );
+  }
+
+  // Check if the place is own by the current logged user
+  if (place.creator.toString() !== req.userData.userId) {
+    return next(new AppError('You are not allowed to delete this place.', 403));
   }
 
   // Remove the placeId from the user's 'places' array

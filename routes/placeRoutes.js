@@ -16,6 +16,8 @@ const {
   updatePlace,
 } = require('../controllers/placeController');
 
+const { protect } = require('../controllers/authController');
+
 ///////////////////////////
 // ROUTER
 
@@ -25,6 +27,7 @@ router
   .route('/')
   .get(getAllPlaces)
   .post(
+    protect,
     [
       check('title').not().isEmpty(),
       check('description').isLength({ min: 5 }),
@@ -36,10 +39,11 @@ router
   .route('/:pid')
   .get(getPlaceById)
   .patch(
+    protect,
     [check('title').not().isEmpty(), check('description').isLength({ min: 5 })],
     updatePlace
   )
-  .delete(deletePlace);
+  .delete(protect, deletePlace);
 router.route('/user/:uid').get(getPlacesByUserId);
 
 module.exports = router;
