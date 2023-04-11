@@ -95,6 +95,9 @@ const getPlacesByUserId = catchAsync(async (req, res, next) => {
  * @returns {json} - Response containing the created Place instance
  */
 const createPlace = catchAsync(async (req, res, next) => {
+  // Get current userId
+  const creator = req.userData.userId;
+
   // Check for input validation errors
   const errors = validationResult(req);
 
@@ -106,7 +109,7 @@ const createPlace = catchAsync(async (req, res, next) => {
   }
 
   // Extract necessary data from the request body
-  const { title, description, image, address, creator } = req.body;
+  const { title, description, image, address } = req.body;
 
   // Convert the address to geographic coordinates using an external API
   let coordinates;
