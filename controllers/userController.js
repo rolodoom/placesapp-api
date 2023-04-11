@@ -82,10 +82,7 @@ const logIn = catchAsync(async (req, res, next) => {
     !(await identifiedUser.correctPassword(password, identifiedUser.password))
   ) {
     return next(
-      new AppError(
-        'Could not identified user, credentials seem to be wrong.',
-        401
-      )
+      new AppError('Invalid credentials, could not log you in.', 401)
     );
   }
 
