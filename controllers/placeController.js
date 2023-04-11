@@ -206,7 +206,7 @@ const updatePlace = catchAsync(async (req, res, next) => {
 
   // Check if the place is own by the current logged user
   if (place.creator.toString() !== req.userData.userId) {
-    return next(new AppError('You are not allowed to edit this place.', 403));
+    return next(new AppError('You are not allowed to update this place.', 403));
   }
 
   const updatedPlace = await Place.findByIdAndUpdate(
@@ -245,8 +245,8 @@ const updatePlace = catchAsync(async (req, res, next) => {
 const deletePlace = catchAsync(async (req, res, next) => {
   const placeId = req.params.pid;
 
-  // Find the place by its ID and populate the 'creator' field
-  const place = await Place.findById(placeId).populate('creator');
+  // Find the place by its ID
+  const place = await Place.findById(placeId);
 
   // If the place was not found, return an error response
   if (!place) {
