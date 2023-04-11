@@ -48,25 +48,6 @@ const userSchema = new mongoose.Schema(
 );
 
 ///////////////////////////
-// PRE MIDDLEWARE
-
-/**
- * Middleware function that hashes the user's password before saving it to the database
- * @function
- * @name hashPassword
- * @memberof UserSchema
- * @async
- * @param {function} next - Mongoose middleware function
- * @returns {void}
- */
-userSchema.pre('save', async function (next) {
-  // Hash de password with cost 12
-  this.password = await bcrypt.hash(this.password, 12);
-
-  next();
-});
-
-///////////////////////////
 // METHODS
 
 /**
