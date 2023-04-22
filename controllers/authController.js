@@ -63,6 +63,10 @@ const signUp = catchAsync(async (req, res, next) => {
 
   const encryptedPassword = await bcrypt.hash(password, 12);
 
+  if (process.env.NODE_ENV === 'production') {
+    return next(new AppError('SignUp is disable for security reasons', 403));
+  }
+
   // Create a new user with the provided data
   const newUser = await User.create({
     name,
